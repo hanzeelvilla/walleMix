@@ -36,3 +36,27 @@ h1 {
     font-family: "Montserrat", serif;
     font-size: var(--text-size);
 }
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}

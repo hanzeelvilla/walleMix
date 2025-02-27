@@ -1,5 +1,6 @@
 import SearchBar from "./SearchBar"
-import "./App.css"
+import "./styles/App.css"
+import Button from "./components/Button.jsx"
 
 function App() {
 
@@ -9,6 +10,20 @@ function App() {
         <h1>WalleMix</h1>
         <SearchBar />
       </header>
+
+      <main className="main-container">
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      <Button btnName="Risa gato"/>
+      </main>
+
     </>
   )
 }
