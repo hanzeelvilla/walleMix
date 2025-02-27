@@ -1,6 +1,7 @@
-import SearchBar from "./SearchBar"
-import "./styles/App.css"
-import Button from "./components/Button.jsx"
+import SearchBar from "./SearchBar";
+import "./styles/App.css";
+import sounds from "../public/sounds.json"
+import Button from "./components/Button";
 
 function App() {
 
@@ -12,16 +13,9 @@ function App() {
       </header>
 
       <main className="main-container">
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
-      <Button btnName="Risa gato"/>
+      { sounds.map((sound, index) => (
+        <Button key={index} btnName={sound.name} src={sound.src}/>
+      ))}
       </main>
 
     </>
