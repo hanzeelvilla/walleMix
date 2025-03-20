@@ -1,34 +1,22 @@
 import "../styles/button.css";
-import { useState } from "react";
-
-const [audioInstance, setAudioInstance] = useState(null);
-
-const playSound = (src) => {
-    const audio = new Audio(src);
-    audio.play();
-    setAudioInstance(audio)
-}
-
-const stopSound = () => {
-    if (audioInstance) {
-        audioInstance.pause();
-        audioInstance.currentTime = 0;
-    }
-}
+import PropTypes from 'prop-types';
 
 function Button(props) {
     const btnName = props.btnName ?? "Unknow";
     const sound = props.src ?? "";
+    console.log(sound);
+
+    const playSound =(sound) => {
+        const audio = new Audio(sound);
+        audio.play()
+    }
 
     return (
         <>
             <div className="btn-container">
                 <button 
                 className="btn-sound"
-                onMouseDown={playSound(sound)}  // PC
-                onMouseUp={stopSound}           // PC
-                onTouchStart={playSound(sound)} // Mobile
-                onTouchEnd={stopSound}          // Mobile
+                onClick={() => playSound(sound)}
                 >
                 </button>
                 <p>{btnName}</p>
@@ -36,5 +24,10 @@ function Button(props) {
         </>
     )
 }
+
+Button.propTypes = {
+    btnName: PropTypes.string,
+    src: PropTypes.string
+};
 
 export default Button;

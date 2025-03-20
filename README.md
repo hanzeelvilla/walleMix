@@ -1,15 +1,14 @@
 # WalleMix 😎
 
-## Sonidos pendientes
-- Luis
-- Beat it
-- Bateria chiste
-- Rap de las chivas
-- Papu pro
-- Mew granados
-- Gato llorando audio
-- Rene
+## Configuración
+Crear un `sound.json` dentro de
 
-## Features
+## Características pendeintes
 - Switch para sobreponer sonidos o para detener el anterior
 - Sección de sonidos favoritos
+- 
+## Sonidos pendientes
+- Rap de las chivas
+- Papu pro
+- Gato llorando audio
+- Rene
